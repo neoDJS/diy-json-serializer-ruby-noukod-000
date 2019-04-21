@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    puts @post.inspect
   end
 
   def new
@@ -14,7 +15,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    @post.save
     redirect_to post_path(@post)
   end
 
