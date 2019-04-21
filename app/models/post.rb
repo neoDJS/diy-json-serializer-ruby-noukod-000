@@ -14,6 +14,6 @@ class Post < ActiveRecord::Base
   belongs_to :author
 
   def name=(value)
-    Author.find_or_create_by(name: value)
+    Self.author = Author.find_or_create_by(name: value);
   end
 end
